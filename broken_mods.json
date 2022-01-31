@@ -1,0 +1,37 @@
+{
+    "[ARIS] Early Death": {
+        "steamID": "421188880",
+        "title": "[ARIS] Early Death",
+        "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=421188880",
+        "issue": "Dead, breaks the game",
+		"replacements": {
+            "replacement1": {
+                "steamID": "421188880",
+                "title": "[ARIS] Early Death",
+                "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=421188880",
+                "comment": "Better as the one that replaces it by this much"
+            },
+            "replacement2": {
+                "steamID": "421188880",
+                "title": "[ARIS] Early Death",
+                "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=421188880",
+                "comment": "Better as the one that replaces it by that much"
+            }
+        }
+    },
+
+    "[ARIS] Remove Stuck Vehicles": {
+        "steamID": "428094792",
+        "title": "[ARIS] Remove Stuck Vehicles",
+        "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=428094792",
+        "issue": "Dead, breaks the game",
+		"replacements": {
+            "TM:PE V11 STABLE": {
+                "steamID": "1637663252",
+                "title": "TM:PE V11 STABLE",
+                "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1637663252",
+                "comment": "Better as the one that replaces it by this much"
+            }
+        }
+    }
+}
