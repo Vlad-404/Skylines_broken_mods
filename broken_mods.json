@@ -1,5 +1,5 @@
 {
-    "[ARIS] Early Death": {
+    "ARIS_Early_Death": {
         "steamID": "421188880",
         "title": "[ARIS] Early Death",
         "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=421188880",
@@ -7,20 +7,20 @@
 		"replacements": {
             "replacement1": {
                 "steamID": "421188880",
-                "title": "[ARIS] Early Death",
+                "title": "Mod sub1",
                 "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=421188880",
                 "comment": "Better as the one that replaces it by this much"
             },
             "replacement2": {
                 "steamID": "421188880",
-                "title": "[ARIS] Early Death",
+                "title": "Mod Sub2",
                 "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=421188880",
                 "comment": "Better as the one that replaces it by that much"
             }
         }
     },
 
-    "[ARIS] Remove Stuck Vehicles": {
+    "ARIS_Remove_Stuck_Vehicles": {
         "steamID": "428094792",
         "title": "[ARIS] Remove Stuck Vehicles",
         "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=428094792",
