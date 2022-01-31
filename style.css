@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;   /* aligns items vertically */
+  align-items: center;      /* centers items in the middle of a column */
+  justify-content: center;  /* aligns items horizontally */
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: green;
+}
