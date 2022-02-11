@@ -17,7 +17,7 @@ let showBrokenMods = (brokenModsList) => {
 
     brokenModsList.forEach((mod) => {
         const { steamID, title, url, issue, replacements } = mod
-        console.log(mod)
+        // console.log(mod)
 
         const modEl = document.createElement('tr')
         modEl.classList.add('mod-row')
@@ -27,9 +27,9 @@ let showBrokenMods = (brokenModsList) => {
             <!-- Name of the mod -->
             <td style="font-weight: bold;">${title}</td>
             <!-- SteamID -->
-            <td>${steamID}</td>
+            <td><a href="${url}" target="_blank">${steamID}</a></td>
             <!-- URL on Steam workshop-->
-            <td>${url}</td>
+            <td><a href="${url}" target="_blank">${url}</a></td>
             <!-- Issue -->
             <td>${issue}</td>
             <td>Replace it with:</td>

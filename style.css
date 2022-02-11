@@ -2,19 +2,42 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;   /* aligns items vertically */
+  /* display: flex; */
+  /* flex-direction: column;    aligns items vertically */
   align-items: center;      /* centers items in the middle of a column */
   justify-content: center;  /* aligns items horizontally */
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
 }
 
 * {
   box-sizing: border-box;
 }
 
-table, th, td {
-  border:1px solid black;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(175, 99, 99, 0.2);
+}
+
+th {
+  background-color: rgb(224, 102, 102);
+  color: #000;
+}
+
+table {
+  /* background-image: linear-gradient(to bottom right, white,rgb(165, 59, 59)); */
+  border-collapse: collapse;
+  min-width: 95%;
+}
+
+td {
+  padding: 10px 5px;
 }

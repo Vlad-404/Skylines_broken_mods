@@ -33,5 +33,20 @@
                 "comment": "Better as the one that replaces it by this much"
             }
         }
+    },
+
+    {
+        "steamID": "959894658",
+        "title": "Custom Light Effects",
+        "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=959894658",
+        "issue": "Memory leaks and crashes. Do not use.",
+		"replacements": {
+            "replacement1": {
+                "steamID": "1886877404",
+                "title": "Custom Effect Loader(by boformer)",
+                "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1886877404&searchtext=Custom+Light+Effects",
+                "comment": "Better as the one that replaces it by this much"
+            }
+        }
     }
 ]
