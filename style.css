@@ -8,10 +8,6 @@ body {
   justify-content: center;  /* aligns items horizontally */
 }
 
-* {
-  box-sizing: border-box;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -35,9 +31,13 @@ th {
 table {
   /* background-image: linear-gradient(to bottom right, white,rgb(165, 59, 59)); */
   border-collapse: collapse;
-  min-width: 95%;
+  min-width: 1080px;
 }
 
 td {
   padding: 10px 5px;
+}
+
+#table-container {
+  overflow-x: auto;
 }
