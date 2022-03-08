@@ -26,6 +26,7 @@ a {
     padding: 15px 20px;
     font-size: 1.5rem;
     font-weight: bold;
+    margin-top: 30px;
 }
 
 .mod-desc-row {
@@ -34,12 +35,17 @@ a {
     flex-direction: row;
     width: 100%;
     padding: 10px 20px;
+    border-bottom: 1px solid #dadada;
 }
 
-.pair {
+/* .pair {
     background-color: #dadada;
-}
+} */
 
 .desc {
-    width: 40%;
+    width: 30%;
+}
+
+.desc-value {
+    width: 70%;
 }
