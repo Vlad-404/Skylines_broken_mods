@@ -43,7 +43,7 @@ let showBrokenMods = (brokenModsList) => {
                 <div class="desc-value">${issue}</div>
             </div>
     
-            <div class="mod-desc-row pair">
+            <div class="mod-desc-row ital pair">
                 <div class="desc-value">Replacements</div>
             </div>
     
