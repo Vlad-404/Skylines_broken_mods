@@ -10,7 +10,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  /* color: inherit; */
 }
 
 #table-container {
@@ -18,7 +18,28 @@ a {
     flex-direction: column;    /*  aligns items vertically */
     align-items: left;      /* centers items in the middle of a column */
     justify-content: center;
-    background-color: aquamarine;
     width: 100vw;
+}
+
+.mod-title {
+    background-color: aquamarine;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mod-desc-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     padding: 10px 20px;
+}
+
+.pair {
+    background-color: #dadada;
+}
+
+.desc {
+    width: 40%;
 }
