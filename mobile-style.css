@@ -2,8 +2,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  /* display: flex; */
-  /* flex-direction: column;    aligns items vertically */
+  display: flex;
+  flex-direction: column;    /*  aligns items vertically */
   align-items: center;      /* centers items in the middle of a column */
   justify-content: center;  /* aligns items horizontally */
 }
@@ -15,4 +15,10 @@ a {
 
 #table-container {
     display: flex;
+    flex-direction: column;    /*  aligns items vertically */
+    align-items: left;      /* centers items in the middle of a column */
+    justify-content: center;
+    background-color: aquamarine;
+    width: 100vw;
+    padding: 10px 20px;
 }
