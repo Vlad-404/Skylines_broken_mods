@@ -1,26 +1,26 @@
+// redirect to mobile website
+if (screen.width <= 768) {
+    document.location = "./mobile-broken.html";
+    }
+
 const brokenModsTable = document.getElementById('mods-list')
+
+const tBody = document.createElement('tbody')
+brokenModsTable.appendChild(tBody)
 
 let brokenModsArray = []
 
 let showBrokenMods = (brokenModsList) => {
-    brokenModsTable.innerHTML = `
-        <tr>
-            <th>Mod</th>
-            <th>SteamID</th>
-            <th>URL</th>
-            <th>Issue</th>
-            <th>Replacement Option 1</th>
-            <th>Replacement Option 2</th>
-        </tr>
-    `
 
     brokenModsList.forEach((mod) => {
         const { steamID, title, url, issue, replacements } = mod
         // console.log(mod)
 
+        
         const modEl = document.createElement('tr')
         modEl.classList.add('mod-row')
-        brokenModsTable.appendChild(modEl)
+        
+        tBody.appendChild(modEl)
 
         modEl.innerHTML = `
             <!-- Name of the mod -->
