@@ -9,7 +9,6 @@ let showBrokenMods = (brokenModsList) => {
             <th>SteamID</th>
             <th>URL</th>
             <th>Issue</th>
-            <th>Replacement</th>
             <th>Replacement Option 1</th>
             <th>Replacement Option 2</th>
         </tr>
@@ -29,11 +28,9 @@ let showBrokenMods = (brokenModsList) => {
             <!-- SteamID -->
             <td><a href="${url}" target="_blank">${steamID}</a></td>
             <!-- URL on Steam workshop-->
-            <td><a href="${url}" target="_blank">${url}</a></td>
+            <td class="align-text-mid"><a href="${url}" target="_blank">${url}</a></td>
             <!-- Issue -->
             <td>${issue}</td>
-            <td>Replace it with:</td>
-            <!-- Replace it with -->
             <td><a href="${replacements.replacement1.url}" target="_blank">${replacements.replacement1.title}</a></td>
         `
     });
