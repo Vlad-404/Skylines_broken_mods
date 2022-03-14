@@ -3,10 +3,10 @@ if (screen.width <= 768) {
     document.location = "./mobile-broken.html";
     }
 
-const brokenModsTable = document.getElementById('mods-list')
+const brokenModsTable = document.getElementById('table-container')
 
-const tBody = document.createElement('tbody')
-brokenModsTable.appendChild(tBody)
+const itemRow = document.createElement('div')
+brokenModsTable.appendChild(itemRow)
 
 let brokenModsArray = []
 
@@ -17,21 +17,20 @@ let showBrokenMods = (brokenModsList) => {
         // console.log(mod)
 
         
-        const modEl = document.createElement('tr')
-        modEl.classList.add('mod-row')
+        const modEl = document.createElement('div')
+        modEl.classList.add('item-row')
         
-        tBody.appendChild(modEl)
+        brokenModsTable.appendChild(modEl)
 
         modEl.innerHTML = `
-            <!-- Name of the mod -->
-            <td style="font-weight: bold;">${title}</td>
-            <!-- SteamID -->
-            <td><a href="${url}" target="_blank">${steamID}</a></td>
-            <!-- URL on Steam workshop-->
-            <td class="align-text-mid"><a href="${url}" target="_blank">${url}</a></td>
-            <!-- Issue -->
-            <td>${issue}</td>
-            <td><a href="${replacements.replacement1.url}" target="_blank">${replacements.replacement1.title}</a></td>
+        <div class="mod-row bold w-20">${title}</div>
+        <div class="mod-row w-10">${steamID}</div>
+        <div class="mod-row align-text-mid w-10"><a href="${url}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
+        <div class="mod-row w-20">${issue}</div>
+        <div class="mod-row w-15"><a href="${replacements.replacement1.url}" target="_blank" rel="noopener">${replacements.replacement1.title}</a></div>
+        <div class="mod-row w-15">
+            ${replacements.replacement2 ? `<a href="${replacements.replacement2.url}" target="_blank" rel="noopener">${replacements.replacement2.title}</a>` : '-'}
+        </div>
         `
     });
 }
@@ -40,4 +39,4 @@ fetch('./broken_mods.json')
 .then(response => {
     return response.json();
 })
-// .then (jsondata => showBrokenMods(jsondata));
+.then (jsondata => showBrokenMods(jsondata));
