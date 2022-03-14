@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
 
+:root {
+  --edit: #7879e3;
+  --del: #f73131;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   align-items: center;      /* centers items in the middle of a column */
@@ -94,7 +99,6 @@ h1 {
 }
 
 .edit {
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,9 +120,9 @@ h1 {
 }
 
 .edit-icon {
-  background-color: #7879e3;
+  background-color: var(--edit);
 }
 
 .del-icon {
-  background-color: #f73131;
+  background-color: var(--del);
 }

@@ -24,7 +24,15 @@ let showBrokenMods = (brokenModsList) => {
         tableContainer.appendChild(modEl)
 
         modEl.innerHTML = `
-            <div class="mod-title">${title}</div>
+            <div class="mod-title">
+                <span class="edit-btn">
+                    <i class="fas fa-edit icon"></i>
+                </span>
+                ${title}
+                <span class="del-btn">
+                    <i class="fas fa-trash-alt icon"></i>
+                </span>
+            </div>
 
             <div class="mod-desc-row">
                 <div class="desc">SteamID</div>
@@ -34,7 +42,7 @@ let showBrokenMods = (brokenModsList) => {
             <div class="mod-desc-row pair">
                 <div class="desc">Workshop Link</div>
                 <div class="desc-value">
-                    <a href="#" target="_blank" rel="noopener">${url}</a>
+                    <a href="${url}" target="_blank" rel="noopener">${url}</a>
                 </div>
             </div>
     
@@ -50,8 +58,12 @@ let showBrokenMods = (brokenModsList) => {
             <div class="mod-desc-row">
                 <div class="desc">${replacements.replacement1.title}</div>
                 <div class="desc-value">
-                    <a href="#" target="_blank" rel="noopener">${replacements.replacement1.url}</a>
+                    <a href="${replacements.replacement1.url}" target="_blank" rel="noopener">${replacements.replacement1.url}</a>
                 </div>
+            </div>
+
+            <div class="delete-btn">
+              <i class="fas fa-trash-alt icon"></i>
             </div>
         `
     });

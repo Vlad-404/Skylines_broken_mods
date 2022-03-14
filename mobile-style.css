@@ -1,5 +1,9 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+:root {
+    --edit: #7879e3;
+    --del: #f73131;
+  }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -27,12 +31,49 @@ a {
 }
 
 .mod-title {
+    position: relative;
     background-color: aquamarine;
     padding: 15px 20px;
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 30px;
+    text-align: center;
 }
+
+.edit-btn {
+    background-color: var(--edit);
+    position: absolute;
+    top: 15%;
+    left: 15px;
+    height: 70%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.del-btn {
+    background-color: var(--del);
+    position: absolute;
+    top: 15%;
+    right: 25px;
+    height: 70%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.icon {
+    color: #fff;
+    font-size: 30px;
+  }
 
 .mod-desc-row {
     display: flex;
