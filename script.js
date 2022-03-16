@@ -13,7 +13,7 @@ let brokenModsArray = []
 let showBrokenMods = (brokenModsList) => {
 
     brokenModsList.forEach((mod) => {
-        const { steamID, title, url, issue, replacements } = mod
+        const { SteamID, Mod, URL, Issue, replacement, __5 } = mod
         // console.log(mod)
 
         
@@ -22,23 +22,46 @@ let showBrokenMods = (brokenModsList) => {
         
         brokenModsTable.appendChild(modEl)
 
+        // modEl.innerHTML = `
+        // <button class="edit edit-sizes edit-icon"><i class="fas fa-edit icon"></i></button>
+        // <div class="mod-row bold w-20">${title}</div>
+        // <div class="mod-row text-mid w-10">${steamID}</div>
+        // <div class="mod-row text-mid w-10"><a href="${url}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
+        // <div class="mod-row w-20">${issue}</div>
+        // <div class="mod-row w-15"><a href="${replacements.replacement1.url}" target="_blank" rel="noopener">${replacements.replacement1.title}</a></div>
+        // <div class="mod-row w-15">
+        //     ${replacements.replacement2 ? `<a href="${replacements.replacement2.url}" target="_blank" rel="noopener">${replacements.replacement2.title}</a>` : ' '}
+        // </div>
+        // <button class="edit edit-sizes del-icon"><i class="fas fa-trash-alt icon"></i></button>
+        // `
         modEl.innerHTML = `
         <button class="edit edit-sizes edit-icon"><i class="fas fa-edit icon"></i></button>
-        <div class="mod-row bold w-20">${title}</div>
-        <div class="mod-row text-mid w-10">${steamID}</div>
-        <div class="mod-row text-mid w-10"><a href="${url}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
-        <div class="mod-row w-20">${issue}</div>
-        <div class="mod-row w-15"><a href="${replacements.replacement1.url}" target="_blank" rel="noopener">${replacements.replacement1.title}</a></div>
+        <div class="mod-row bold w-20"><a href="${URL}" target="_blank" rel="noopener">${Mod}</a></div>
+        <div class="mod-row text-mid w-10">${SteamID}</div>
+        <div class="mod-row text-mid w-10"><a href="${URL}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
+        <div class="mod-row w-20">${Issue}</div>
         <div class="mod-row w-15">
-            ${replacements.replacement2 ? `<a href="${replacements.replacement2.url}" target="_blank" rel="noopener">${replacements.replacement2.title}</a>` : ' '}
+            ${replacement ? `<a href="${__5}" target="_blank" rel="noopener">${replacement}</a>` : ' '}
         </div>
         <button class="edit edit-sizes del-icon"><i class="fas fa-trash-alt icon"></i></button>
         `
     });
 }
 
-fetch('./broken_mods.json')
+fetch('./broken_mods_test.json')
 .then(response => {
     return response.json();
 })
 .then (jsondata => showBrokenMods(jsondata));
+
+// fetch('./broken_mods.csv')
+// .then(response => {
+//     console.log(response)
+//     jsondata = CSVJSON.csv2json(response)
+//     // return jsondata
+//     // return CSVJSON.csv2json(response)
+//     // jsondata = csv2json(response, {parseNumbers: true})
+//     console.log(jsondata)
+//     return jsondata
+// })
+// .then (jsondata => console.log(jsondata));
