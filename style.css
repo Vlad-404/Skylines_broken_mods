@@ -10,7 +10,6 @@ body {
   align-items: center;      /* centers items in the middle of a column */
   justify-content: center;  /* aligns items horizontally */
   padding: 0;
-  margin: 0;
 }
 
 a {
@@ -26,6 +25,10 @@ h1 {
 
 .bold {
   font-weight: bold;
+}
+
+.ital {
+  font-style: italic;
 }
 
 .text-mid {
@@ -48,7 +51,6 @@ h1 {
   display: block;
   position: relative;
   width: 94vw;
-  height: 1500px;
   margin: 0 auto;
 }
 
@@ -125,4 +127,82 @@ h1 {
 
 .del-icon {
   background-color: var(--del);
+}
+
+/* Mobile list styling */
+.mod-title {
+  position: relative;
+  background-color: aquamarine;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.edit-btn {
+  background-color: var(--edit);
+  position: absolute;
+  top: 15%;
+  left: 15px;
+  height: 70%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.del-btn {
+  background-color: var(--del);
+  position: absolute;
+  top: 15%;
+  right: 25px;
+  height: 70%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.mod-desc-row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  border-bottom: 1px solid #dadada;
+}
+
+.desc {
+  width: 30%;
+}
+
+.desc-value {
+  width: 70%;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;    /*  aligns items vertically */
+    align-items: center;      /* centers items in the middle of a column */
+    justify-content: center;  /* aligns items horizontally */
+  }
+
+  #table-container {
+    display: flex;
+    flex-direction: column;    /*  aligns items vertically */
+    align-items: left;      /* centers items in the middle of a column */
+    justify-content: center;
+    width: 96vw;
+  }
+
+  .sm-hide {
+    display: none;
+  }
 }

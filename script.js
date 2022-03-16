@@ -1,8 +1,3 @@
-// redirect to mobile website
-if (screen.width <= 768) {
-    document.location = "./mobile-broken.html";
-    }
-
 const brokenModsTable = document.getElementById('table-container')
 
 const itemRow = document.createElement('div')
@@ -14,37 +9,78 @@ let showBrokenMods = (brokenModsList) => {
 
     brokenModsList.forEach((mod) => {
         const { SteamID, Mod, URL, Issue, replacement, __5 } = mod
-        // console.log(mod)
 
-        
         const modEl = document.createElement('div')
-        modEl.classList.add('item-row')
-        
-        brokenModsTable.appendChild(modEl)
 
-        // modEl.innerHTML = `
-        // <button class="edit edit-sizes edit-icon"><i class="fas fa-edit icon"></i></button>
-        // <div class="mod-row bold w-20">${title}</div>
-        // <div class="mod-row text-mid w-10">${steamID}</div>
-        // <div class="mod-row text-mid w-10"><a href="${url}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
-        // <div class="mod-row w-20">${issue}</div>
-        // <div class="mod-row w-15"><a href="${replacements.replacement1.url}" target="_blank" rel="noopener">${replacements.replacement1.title}</a></div>
-        // <div class="mod-row w-15">
-        //     ${replacements.replacement2 ? `<a href="${replacements.replacement2.url}" target="_blank" rel="noopener">${replacements.replacement2.title}</a>` : ' '}
-        // </div>
-        // <button class="edit edit-sizes del-icon"><i class="fas fa-trash-alt icon"></i></button>
-        // `
-        modEl.innerHTML = `
-        <button class="edit edit-sizes edit-icon"><i class="fas fa-edit icon"></i></button>
-        <div class="mod-row bold w-20"><a href="${URL}" target="_blank" rel="noopener">${Mod}</a></div>
-        <div class="mod-row text-mid w-10">${SteamID}</div>
-        <div class="mod-row text-mid w-10"><a href="${URL}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
-        <div class="mod-row w-20">${Issue}</div>
-        <div class="mod-row w-15">
-            ${replacement ? `<a href="${__5}" target="_blank" rel="noopener">${replacement}</a>` : ' '}
-        </div>
-        <button class="edit edit-sizes del-icon"><i class="fas fa-trash-alt icon"></i></button>
-        `
+        if (screen.width > 768) {
+
+            modEl.innerHTML = `
+                <button class="edit edit-sizes edit-icon"><i class="fas fa-edit icon"></i></button>
+                <div class="mod-row bold w-20"><a href="${URL}" target="_blank" rel="noopener">${Mod}</a></div>
+                <div class="mod-row text-mid w-10">${SteamID}</div>
+                <div class="mod-row text-mid w-10"><a href="${URL}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
+                <div class="mod-row w-20">${Issue}</div>
+                <div class="mod-row w-15">
+                    ${replacement ? `<a href="${__5}" target="_blank" rel="noopener">${replacement}</a>` : ' '}
+                </div>
+                <button class="edit edit-sizes del-icon"><i class="fas fa-trash-alt icon"></i></button>
+                `
+            modEl.classList.add('item-row')
+        
+            brokenModsTable.appendChild(modEl)
+        } else {
+            modEl.classList.add('mod-container')
+            modEl.innerHTML = `
+                <div class="mod-title">
+                    <span class="edit-btn">
+                        <i class="fas fa-edit icon"></i>
+                    </span>
+                    ${Mod}
+                    <span class="del-btn">
+                        <i class="fas fa-trash-alt icon"></i>
+                    </span>
+                </div>
+
+                <div class="mod-desc-row">
+                    <div class="desc">SteamID</div>
+                    <div class="desc-value">${SteamID}</div>
+                </div>
+        
+                <div class="mod-desc-row pair">
+                    <div class="desc">Workshop Link</div>
+                    <div class="desc-value">
+                        <a href="${URL}" target="_blank" rel="noopener">${Mod}</a>
+                    </div>
+                </div>
+        
+                <div class="mod-desc-row">
+                    <div class="desc">Issue</div>
+                    <div class="desc-value">${Issue}</div>
+                </div>
+        
+                <div class="mod-desc-row ital pair">
+                    <div class="desc-value">Replacements</div>
+                </div>
+                ${replacement ? 
+                    `<div class="mod-desc-row">
+                        <div class="desc">${replacement}</div>
+                        <div class="desc-value">
+                            <a href="${__5}" target="_blank" rel="noopener">${__5}</a>
+                        </div>
+                    </div>` : `<div class="mod-desc-row">
+                    <div class="desc">None so far</div>
+                    <div class="desc-value">
+                        -
+                    </div>
+                </div>`
+                }
+
+                <div class="delete-btn">
+                <i class="fas fa-trash-alt icon"></i>
+                </div>
+            `
+            brokenModsTable.appendChild(modEl)
+        }
     });
 }
 
