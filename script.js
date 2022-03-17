@@ -16,7 +16,9 @@ let showBrokenMods = (brokenModsList) => {
 
             modEl.innerHTML = `
                 <button class="edit edit-sizes edit-icon"><i class="fas fa-edit icon"></i></button>
-                <div class="mod-row bold w-20"><a href="${URL}" target="_blank" rel="noopener">${Mod}</a></div>
+                <div class="mod-row bold w-20"><a href="${URL}" target="_blank" rel="noopener">
+                ${Mod}
+                </a></div>
                 <div class="mod-row text-mid w-10">${SteamID}</div>
                 <div class="mod-row text-mid w-10"><a href="${URL}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
                 <div class="mod-row w-20">${Issue}</div>
@@ -29,6 +31,7 @@ let showBrokenMods = (brokenModsList) => {
         
             brokenModsTable.appendChild(modEl)
         } else {
+            // for screens smaller than 768px
             modEl.classList.add('mod-container')
             modEl.innerHTML = `
                 <div class="mod-title">
@@ -49,7 +52,10 @@ let showBrokenMods = (brokenModsList) => {
                 <div class="mod-desc-row pair">
                     <div class="desc">Workshop Link</div>
                     <div class="desc-value">
-                        <a href="${URL}" target="_blank" rel="noopener">${Mod}</a>
+                        <a href="${URL}" target="_blank" rel="noopener">
+                            ${Mod}
+                            <sup><i class="fas fa-external-link-alt"></i></sup>
+                        </a>
                     </div>
                 </div>
         
@@ -63,7 +69,11 @@ let showBrokenMods = (brokenModsList) => {
                 </div>
                 ${replacement ? 
                     `<div class="mod-desc-row">
-                        <a href="${__5}" target="_blank" rel="noopener">${replacement}</a>
+                        <div class="desc">${replacement}</div>
+                        <div class="desc-value">
+                            <a href="${__5}" target="_blank" rel="noopener">${__5}</a>
+                            <sup><i class="fas fa-external-link-alt"></i></sup>
+                        </div>
                     </div>` : 
                     `<div class="mod-desc-row">
                         None so far

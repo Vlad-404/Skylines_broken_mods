@@ -23,6 +23,12 @@ h1 {
   margin-bottom: 80px;
 }
 
+sup {
+  color: rgb(160, 160, 160);
+  font-size: 10px;
+  margin-left: 3px;
+}
+
 .bold {
   font-weight: bold;
 }
