@@ -179,11 +179,16 @@ h1 {
 
 .desc {
   width: 30%;
+  padding-right: 10px
 }
 
 .desc-value {
   width: 70%;
   word-wrap: break-word;
+}
+
+.desc-replacement {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {

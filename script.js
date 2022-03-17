@@ -63,16 +63,11 @@ let showBrokenMods = (brokenModsList) => {
                 </div>
                 ${replacement ? 
                     `<div class="mod-desc-row">
-                        <div class="desc">${replacement}</div>
-                        <div class="desc-value">
-                            <a href="${__5}" target="_blank" rel="noopener">${__5}</a>
-                        </div>
-                    </div>` : `<div class="mod-desc-row">
-                    <div class="desc">None so far</div>
-                    <div class="desc-value">
-                        -
-                    </div>
-                </div>`
+                        <a href="${__5}" target="_blank" rel="noopener">${replacement}</a>
+                    </div>` : 
+                    `<div class="mod-desc-row">
+                        None so far
+                    </div>`
                 }
 
                 <div class="delete-btn">
