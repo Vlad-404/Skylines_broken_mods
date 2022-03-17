@@ -23,7 +23,7 @@ let showBrokenMods = (brokenModsList) => {
                 <div class="mod-row text-mid w-10"><a href="${URL}" target="_blank" rel="noopener"><i class="fab fa-steam"></i></a></div>
                 <div class="mod-row w-20">${Issue}</div>
                 <div class="mod-row w-15">
-                    ${replacement ? `<a href="${__5}" target="_blank" rel="noopener">${replacement}</a>` : ' '}
+                    ${replacement ? `<a href="${__5}" target="_blank" rel="noopener">${replacement}</a>` : '-'}
                 </div>
                 <button class="edit edit-sizes del-icon"><i class="fas fa-trash-alt icon"></i></button>
                 `
@@ -76,7 +76,7 @@ let showBrokenMods = (brokenModsList) => {
                         </div>
                     </div>` : 
                     `<div class="mod-desc-row">
-                        None so far
+                        -
                     </div>`
                 }
 
