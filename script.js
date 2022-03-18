@@ -1,4 +1,11 @@
 const brokenModsTable = document.getElementById('table-container')
+const mobileNavToggle = document.querySelector('.mob-nav-icon')
+const mobileMenu = document.getElementById('mob-nav-list')
+
+// hide/show mobile navbar
+mobileNavToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hide')
+})
 
 const itemRow = document.createElement('div')
 brokenModsTable.appendChild(itemRow)
