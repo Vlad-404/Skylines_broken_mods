@@ -84,10 +84,13 @@ nav h1 {
 }
 
 #nav-items-large li {
-  /* display: inline-block; */
   vertical-align: middle;
   text-align: center;
   padding: 5px 10px;
+}
+
+#nav-items-large li a {
+  display: block;
 }
 
 .page-desc {
@@ -147,6 +150,10 @@ nav h1 {
   flex-direction: column;
   padding-left: 5px;
   word-wrap: break-word;
+}
+
+.mod-row a {
+  display: block;
 }
 
 .edit {
@@ -223,6 +230,10 @@ nav h1 {
 #mob-nav-list li {
   margin-bottom: 10px;
   font-size: 1.2rem;
+}
+
+#mob-nav-list li a {
+  display: block;
 }
 
 .mod-title {
