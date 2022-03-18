@@ -20,20 +20,35 @@
 <body>
   <nav>
     <h1 id="title">Cities Skylines | List of Broken mods</h1>
-    <ul>
-      <li class="nav-item"><a href="#">Home</a></li>
-      <li class="nav-item"><a href="#">Broken Mods</a></li>
-      <li class="nav-item"><a href="#">Incompatible Mods</a></li>
-      <li class="nav-item"><a href="#">Latest patch Issues</a></li>
-      <li class="nav-item"><a href="#">How to use...</a></li>
+    <ul id="nav-items-large">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Broken Mods</a></li>
+      <li><a href="#">Incompatible Mods</a></li>
+      <li><a href="#">Latest patch Issues</a></li>
+      <li><a href="#">Dark Mode</a></li>
+      <li><a href="#">How to use...</a></li>
     </ul>
     <div id="mob-nav">
       <button class="mob-nav-icon">
         <i class="fas fa-bars"></i>
       </button>
+      <ul id="mob-nav-list" class="hide">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Broken Mods</a></li>
+        <li><a href="#">Incompatible Mods</a></li>
+        <li><a href="#">Latest patch Issues</a></li>
+        <li><a href="#">Dark Mode</a></li>
+        <li><a href="#">How to use...</a></li>
+      </ul>
     </div>
   </nav>
-  <button id="dark-mode">Dark mode?</button>
+
+  <div class="page-desc">
+    <p>
+      These mods are all broken, dead, or not compatible with the current version of the game. Please read the 'Issue' column before making assumptions! 
+      If there is a replacement, it's listed in the green row under Replacement. Links provided for quick unsubscribing/subscribing.
+    </p>
+  </div>
   <div id="table-container">
     <div class="desc-row">
       <div class="edit-sizes">Edit</div>

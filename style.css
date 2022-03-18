@@ -5,6 +5,7 @@
   --del: #f73131;
   --navbar: #434343;
   --navtext: #dd4845;
+  --gray: #a0a0a0;
 }
 
 body {
@@ -55,10 +56,13 @@ sup {
   width: 10%;
 }
 
+.hide {
+  display: none!important;
+}
+
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-between;
   background-color: var(--navbar);
   color: var(--navtext);
@@ -69,7 +73,7 @@ nav h1 {
   min-width: 50%;
 }
 
-nav ul {
+#nav-items-large {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -79,11 +83,17 @@ nav ul {
   list-style-type: none;
 }
 
-nav ul li {
+#nav-items-large li {
   /* display: inline-block; */
   vertical-align: middle;
   text-align: center;
   padding: 5px 10px;
+}
+
+.page-desc {
+  background-color: var(--gray);
+  margin: 15px 0;
+  padding: 10px 20px;
 }
 
 #table-container {
@@ -171,14 +181,40 @@ nav ul li {
 /* Mobile styling */
 #mob-nav {
   position: relative;
+  background-color: var(--navbar);
+  border: 1px solid var(--navtext);
+  border-radius: 3px;
+  padding: 10px;
 }
 
 .mob-nav-icon {
-  background-color: var(--navbar);
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
   color: var(--navtext);
   font-size: 30px;
+  border: none;
+  z-index: 2;
+}
+
+#mob-nav-list {
+  background-color: var(--navbar);
+  position: absolute;
+  width: 200px;
+  right: -1px;
+  top: -1px;
+  margin-top: 0;
+  padding: 50px 20px 10px 10px;
   border: 1px solid var(--navtext);
-  border-radius: 2px;
+  border-radius: 3px;
+  list-style: none;
+  z-index: 1;
+}
+
+#mob-nav-list li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .mod-title {
@@ -258,7 +294,7 @@ nav ul li {
 
 /* optimisations for screens > 1177px */
 @media screen and (max-width: 1177px) {
-  nav ul li {
+  #nav-items-large {
     display: none;
   }
 }
