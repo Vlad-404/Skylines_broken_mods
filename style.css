@@ -6,6 +6,8 @@
   --navbar: #434343;
   --navtext: #dd4845;
   --gray: #a0a0a0;
+  --primary-color: #000;
+  --secondary-color: #bebebe;
 }
 
 body {
@@ -60,6 +62,22 @@ sup {
   display: none!important;
 }
 
+/* dark/light mode config */
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+/* Navbar */
 nav {
   display: flex;
   align-items: center;
@@ -123,7 +141,7 @@ nav h1 {
   flex-wrap: nowrap;
   align-items: center;
   min-height: 50px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .desc-item {

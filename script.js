@@ -1,10 +1,26 @@
 const brokenModsTable = document.getElementById('table-container')
 const mobileNavToggle = document.querySelector('.mob-nav-icon')
 const mobileMenu = document.getElementById('mob-nav-list')
-
+const toggleDark = document.querySelectorAll('.toggle')
+console.log(toggleDark)
 // hide/show mobile navbar
 mobileNavToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('hide')
+})
+
+// dark/light mode config
+toggleDark.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        const html = document.querySelector('html')
+
+        if(html.classList.contains('dark')) {
+            html.classList.remove('dark')
+            e.target.innerHTML = 'Dark mode'
+        } else {
+            html.classList.add('dark')
+            e.target.innerHTML = 'Light mode'
+        }
+    })
 })
 
 const itemRow = document.createElement('div')
