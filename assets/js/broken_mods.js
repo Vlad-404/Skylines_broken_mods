@@ -2,10 +2,22 @@ const brokenModsTable = document.getElementById('table-container')
 const mobileNavToggle = document.querySelector('.mob-nav-icon')
 const mobileMenu = document.getElementById('mob-nav-list')
 const toggleDark = document.querySelectorAll('.toggle')
-console.log(toggleDark)
+
 // hide/show mobile navbar
+window.onclick = (e) => {
+    if (e.target.classList.contains('.fa-bars')) {
+        console.log(e.target)
+        //mobileMenu.className = 'hide'
+    // if (e.target.matches('.hide')) {
+    //     console.log('e.target.classList.contains("hide")')
+    }
+}
 mobileNavToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hide')
+    //if(mobileMenu.classList.contains('hide')) {
+        mobileMenu.classList.toggle('hide')
+    //} else {
+        // console.log('proof that the function works')
+    //}
 })
 
 // dark/light mode config
@@ -23,6 +35,7 @@ toggleDark.forEach((btn) => {
     })
 })
 
+// get mod list from json file
 const itemRow = document.createElement('div')
 brokenModsTable.appendChild(itemRow)
 
@@ -102,17 +115,13 @@ let showBrokenMods = (brokenModsList) => {
                         -
                     </div>`
                 }
-
-                <div class="delete-btn">
-                <i class="fas fa-trash-alt icon"></i>
-                </div>
             `
             brokenModsTable.appendChild(modEl)
         }
     });
 }
 
-fetch('./broken_mods_test.json')
+fetch('./assets/json/broken_mods_test.json')
 .then(response => {
     return response.json();
 })
