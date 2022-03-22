@@ -22,6 +22,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 h1 {
@@ -32,6 +33,14 @@ sup {
   color: #a0a0a0;
   font-size: 10px;
   margin-left: 3px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .bold {
