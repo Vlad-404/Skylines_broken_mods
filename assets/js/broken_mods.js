@@ -37,8 +37,6 @@ toggleDark.forEach((btn) => {
 })
 
 // get mod list from json file
-const itemRow = document.createElement('div')
-brokenModsTable.appendChild(itemRow)
 
 let brokenModsArray = []
 

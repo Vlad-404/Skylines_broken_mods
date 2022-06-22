@@ -57,21 +57,26 @@ uploadBtn.addEventListener('click', () => {
     if (uploadedFile.files[0] === undefined) {
         console.log('No file!')
     } else {
-        console.log(uploadedFile.files[0])
+        // console.log(uploadedFile.files[0])
 
+        // convert csv to json. Code from: https://www.geeksforgeeks.org/how-to-convert-csv-to-json-file-and-vice-versa-in-javascript/
         const CSVToJSON = (csv) => {
             const lines = csv.split('\n');
             const keys = lines[0].split(',');
-            return lines.slice(1).map(line => {
-                return line.split(',').reduce((acc, cur, i) => {
-                    const toAdd = {};
-                    toAdd[keys[i]] = cur;
-                    return { ...acc, ...toAdd };
-                }, {});
-            });
+            console.log(keys)
+            return lines
+                .slice(1)
+                .map(line => {
+                    return line.split(',').reduce((acc, cur, i) => {
+                        const toAdd = {};
+                        toAdd[keys[i]] = cur;
+                        return { ...acc, ...toAdd };
+                    }, {});
+                });
         };
 
         console.log(CSVToJSON(stringyfiedCsv))
+        //console.log(CSVToJSON(uploadedFile.files[0]))
 
         // function logFile(event) {
         //     let str = event.target.result;
