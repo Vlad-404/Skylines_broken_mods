@@ -1,5 +1,5 @@
 const brokenModsTable = document.getElementById('table-container')
-const mobileNavToggle = document.querySelector('.mob-nav-icon')
+const mobileNavToggle = document.querySelector('#mob-nav')
 const mobileMenu = document.getElementById('mob-nav-list')
 const toggleDark = document.querySelectorAll('.toggle')
 
@@ -12,6 +12,7 @@ window.onclick = (e) => {
     //     console.log('e.target.classList.contains("hide")')
     }
 }
+
 mobileNavToggle.addEventListener('click', () => {
     //if(mobileMenu.classList.contains('hide')) {
         mobileMenu.classList.toggle('hide')
